@@ -26,6 +26,10 @@ PRODUCT_PACKAGES += \
     otapreopt_script \
     checkpoint_gc
 
+# Dolby Audio
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
@@ -88,6 +92,10 @@ PRODUCT_COPY_FILES += \
 # Automotive
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-manager-lib
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Atrace
 PRODUCT_PACKAGES += \
@@ -212,6 +220,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
+PRODUCT_PACKAGES += \
+    libcodec2_hidl_shim
+    
 # ModemManager
 PRODUCT_PACKAGES += \
     libqesdk_manager_32bit_stub \
