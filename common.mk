@@ -326,6 +326,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
+    hardware/qcom-caf/thermal \
+    hardware/qcom-caf/sm8550
 
 # Telephony
 PRODUCT_PACKAGES += \
