@@ -131,6 +131,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service
 
+# Dolby Audio
+PRODUCT_PACKAGES += \
+    XiaomiDolby \
+    libcodec2_hidl_shim
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -314,7 +319,8 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
-    vendor/qcom/opensource/usb/etc
+    vendor/qcom/opensource/usb/etc \
+    hardware/qcom-caf/thermal
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -414,3 +420,7 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libwfdaac_vendor
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
