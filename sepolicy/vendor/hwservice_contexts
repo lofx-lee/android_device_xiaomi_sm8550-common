@@ -7,3 +7,6 @@ vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel u:object_r:vendor_hal_fingerprint_
 
 # Media
 vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
+
+# Dolby
+vendor.dolby.hardware.dms::IDms       u:object_r:hal_dms_hwservice:s0
