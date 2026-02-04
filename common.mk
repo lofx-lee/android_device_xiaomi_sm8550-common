@@ -36,7 +36,11 @@ PRODUCT_PACKAGES += \
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts
-    
+
+# DSPVolumeSynchronizer
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+        
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
