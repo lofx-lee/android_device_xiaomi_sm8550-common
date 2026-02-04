@@ -33,6 +33,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DolbyAtmos
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+    
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
