@@ -1,18 +1,42 @@
 [
   {
-    "repository": "android_hardware_xiaomi",
-    "target_path": "hardware/xiaomi"
+    "repository": "lofx-lee/android_frameworks_base",
+    "target_path": "frameworks/base"
+    "branch": "bp4a"
   },
   {
-    "repository": "android_kernel_xiaomi_sm8550",
-    "target_path": "kernel/xiaomi/sm8550"
+    "repository": "lofx-lee/android_packages_apps_Settings",
+    "target_path": "packages/apps/Settings"
+    "branch": "bp4a"
   },
   {
-    "repository": "android_kernel_xiaomi_sm8550-devicetrees",
-    "target_path": "kernel/xiaomi/sm8550-devicetrees"
+    "repository": "lofx-lee/android_packages_apps_DolbyAtmos",
+    "target_path": "packages/apps/DolbyAtmos"
+    "branch": "bp4a"
   },
   {
-    "repository": "android_kernel_xiaomi_sm8550-modules",
-    "target_path": "kernel/xiaomi/sm8550-modules"
+    "repository": "lofx-lee/vendor_xiaomi_sm8550-common-dolby",
+    "target_path": "vendor/xiaomi/sm8550-common-dolby",
+    "branch": "bp4a"
+  },
+  {
+    "repository": "lofx-lee/proprietary_vendor_xiaomi_sm8550-common",
+    "target_path": "vendor/xiaomi/sm8550-common"
+    "branch": "bp4a"
+  },
+  {
+    "repository": "lofx-lee/android_vendor_custom",
+    "target_path": "vendor/custom"
+    "branch": "bp4a"
+  },
+  {
+    "repository": "lofx-lee/android_vendor_xiaomi_GoogleCamera",
+    "target_path": "vendor/xiaomi/GoogleCamera"
+    "branch": "bp4a"
+  },
+  {
+    "repository": "lofx-lee/android_vendor_xiaomi_bcr",
+    "target_path": "vendor/xiaomi/bcr"
+    "branch": "bp4a"
   }
 ]
