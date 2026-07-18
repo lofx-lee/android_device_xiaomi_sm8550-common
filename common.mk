@@ -32,6 +32,10 @@ PRODUCT_PACKAGES += \
     otapreopt_script \
     checkpoint_gc
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libui-v34
+
 # XiaomiParts
 PRODUCT_PACKAGES += \
     XiaomiParts

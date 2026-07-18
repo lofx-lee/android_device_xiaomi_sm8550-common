@@ -10,4 +10,4 @@ hal_server_domain(hal_quickcamera_default, hal_quickcamera)
 binder_call(hal_quickcamera_client, hal_quickcamera_server)
 binder_call(hal_quickcamera_server, hal_quickcamera_client)
 
-#add_hwservice(hal_quickcamera_server, hal_quickcamera_hwservice)
+add_hwservice(hal_quickcamera_server, hal_quickcamera_hwservice)
