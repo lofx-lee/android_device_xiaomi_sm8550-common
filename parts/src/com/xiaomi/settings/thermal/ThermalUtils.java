@@ -27,7 +27,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.telecom.DefaultDialerManager;
+import android.app.role.RoleManager;
 import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
@@ -256,13 +256,25 @@ public final class ThermalUtils {
 
         if (AppUtils.isBrowserApp(mContext, packageName, UserHandle.myUserId())) {
             return STATE_BROWSER;
-        } else if (DefaultDialerManager.getDefaultDialerApplication(mContext).equals(packageName)) {
+        } else if (isDialerApp(mContext, packageName)) {
             return STATE_DIALER;
         } else if (isCameraApp(packageName)) {
             return STATE_CAMERA;
         } else {
             return STATE_DEFAULT;
         }
+    }
+
+    private boolean isDialerApp(Context context, String packageName) {
+        if (context == null || packageName == null || packageName.isEmpty()) {
+            return false;
+        }
+        RoleManager roleManager = context.getSystemService(RoleManager.class);
+        if (roleManager != null) {
+            List<String> dialers = roleManager.getRoleHolders(RoleManager.ROLE_DIALER);
+            return dialers != null && dialers.contains(packageName);
+        }
+        return false;
     }
 
     private boolean isCameraApp(String packageName) {
