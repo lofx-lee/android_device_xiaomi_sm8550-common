@@ -57,6 +57,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('pipe2: 1'),
     'vendor/etc/qcril_database/upgrade/config/6.0_config.sql' : blob_fixup()
         .regex_replace('(persist\\.vendor\\.radio\\.redir_party_num.*)true', '\\1false'),
+    'vendor/lib64/libqc2audio_hwaudiocodec.so' : blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/lib64/libqcodec2_core.so' : blob_fixup()
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so' : blob_fixup()
@@ -69,7 +71,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     (
        'vendor/etc/media_codecs_kalama.xml',
-       'vendor/etc/media_codecs_kalama_vendor_without_dvenc.xml',       
     ): blob_fixup()
         .regex_replace('.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
     (
